@@ -6,37 +6,26 @@
 $fruits = ["りんご"=>100,"みかん"=>50,"もも"=>1000
 ];
 
-// // 配列の0:リンゴ、1:みかん、2:桃の順に個数を配列 "=> 連想配列" で作成してください。
-$quantitis = ["りんご"=>1,"みかん"=>2,"もも"=>4
+// // 配列の0:リンゴ、1:みかん、2:桃の順に個数を配列で作成してください。
+$quantitis = [3,3,3
 ];
 
 
 // // step2:単価 "=> 合計"を計算する関数を定義してください。
 // // 引数はフルーツの単価・個数の２つ、返り値は計算した合計値を返します。
-function gettotal($value, $quantity){
-    $product = $value * $quantity;
-    return $product;
+function gettotal($value, $quantitis){
+    $products = $value * $quantitis;
+    return $products;
     }
 
 // // step3:繰り返しを使ってそれぞれのフルーツを書き出してください。
 
+$i = 0;
 foreach($fruits as $key => $value){
-	$quantity = 3;
-    $product = gettotal($value,$quantity);
-	print  "$key は $product 円です。<br>"; 
+
+$products = gettotal($value,$quantitis[$i]);
+print  "$key は $products 円です。<br>"; 
 }
-
-
-// ※数量をそれぞれ当てはめるところができません
-foreach($fruits as $key => $value)
-foreach($quantitis as $quantity){
-			
-	$product = gettotal($value,$quantity);
-	print  "$key は $product 円です。<br>";	
- 
-}
-  
-
 
 ?>
 
@@ -46,7 +35,19 @@ foreach($quantitis as $quantity){
 
 
 
+
+
+
 <?php
+// foreach($fruits as $key => $value){
+// 	$quantity = 3;
+//     $product = gettotal($value,$quantity);
+// 	print  "$key は $product 円です。<br>"; 
+// }
+// ※数量をそれぞれ当てはめるところができません
+
+
+
 // $array = [
 //     ["りんご","300"],
 //     ["みかん","150"],
