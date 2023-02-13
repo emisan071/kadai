@@ -10,14 +10,6 @@ $answer2 = $_POST['answer2'];
 $answer3 = $_POST['answer3'];
 ?>
 
-<?php
-//選択した回答と正解が一致していれば「正解！」、一致していなければ「残念・・・」と出力される処理を組んだ関数を作成する
-if(isset($question) == isset($answer)){
-	$result = "正解！";
-}else{
-	$result = "残念･･･";
-}
-?>
 <p><?php echo $my_name; ?>さんの結果は・・・？</p>
 <p>①の答え</p>
 <!--作成した関数を呼び出して結果を表示-->
